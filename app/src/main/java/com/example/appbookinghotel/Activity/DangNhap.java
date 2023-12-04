@@ -46,6 +46,13 @@ public class DangNhap extends AppCompatActivity {
 
             }
         });
+        Btn_DangNhap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DangNhap.this, TrangChu.class);
+                startActivity(intent);
+            }
+        });
         DangKyBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -62,6 +69,7 @@ public class DangNhap extends AppCompatActivity {
         Edt_MatKhau = findViewById(R.id.Edt_MatKhau);
         passwordIcon = findViewById(R.id.Show_icon);
         DangKyBtn = findViewById(R.id.DangKyBtn);
+        Btn_DangNhap = findViewById(R.id.DangNhapBtn);
     }
 
 }
