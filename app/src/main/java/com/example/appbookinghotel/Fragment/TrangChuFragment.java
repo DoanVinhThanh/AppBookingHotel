@@ -3,7 +3,6 @@ package com.example.appbookinghotel.Fragment;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.viewpager.widget.ViewPager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,10 +12,10 @@ import com.example.appbookinghotel.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link HomePageFragment#newInstance} factory method to
+ * Use the {@link TrangChuFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class HomePageFragment extends Fragment {
+public class TrangChuFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -27,7 +26,7 @@ public class HomePageFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public HomePageFragment() {
+    public TrangChuFragment() {
         // Required empty public constructor
     }
 
@@ -37,11 +36,11 @@ public class HomePageFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment HomePageFragment.
+     * @return A new instance of fragment TrangChuFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static HomePageFragment newInstance(String param1, String param2) {
-        HomePageFragment fragment = new HomePageFragment();
+    public static TrangChuFragment newInstance(String param1, String param2) {
+        TrangChuFragment fragment = new TrangChuFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -57,23 +56,11 @@ public class HomePageFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
-    int currentPage = 0;
-    private ViewPager viewPager;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_home_page, container, false);
-
-        Uinit(view);
-
-        return view;
-
-    }
-
-    private void Uinit(View view) {
-
-        viewPager = (ViewPager) view.findViewById(R.id.viewpager);
+        return inflater.inflate(R.layout.fragment_trang_chu, container, false);
     }
 }
