@@ -26,5 +26,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:itemPaddingBottom="15dp"
         app:menu="@menu/menu_navbottom"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

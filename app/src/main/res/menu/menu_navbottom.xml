@@ -5,13 +5,17 @@
     <item
         android:id="@+id/home"
         android:icon="@drawable/icon_homeee"
-        android:title="TRANG CHỦ" />
+        android:title="Trang chủ" />
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/baseline_saved_search_24"
+        android:title="Tìm kiếm" />
     <item
         android:id="@+id/booking"
         android:icon="@drawable/baseline_thumb_up_24"
-        android:title="YÊU THÍCH" />
+        android:title="Yêu thích" />
     <item
         android:id="@+id/account"
         android:icon="@drawable/icon_person"
-        android:title="TÀI KHOẢN" />
+        android:title="Tài khoản" />
 </menu>
