@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.example.appbookinghotel.Fragment.DatTauFragment;
+import com.example.appbookinghotel.Fragment.YeuThichFragment;
 import com.example.appbookinghotel.Fragment.TaiKhoanFragment;
 import com.example.appbookinghotel.Fragment.TimKiemFragment;
 import com.example.appbookinghotel.Fragment.TrangChuFragment;
@@ -31,7 +31,7 @@ public class TrangChu extends AppCompatActivity {
             } else if (itemId == R.id.search) {
                 replaceFragment(new TimKiemFragment());
             } else if (itemId == R.id.booking) {
-                replaceFragment(new DatTauFragment());
+                replaceFragment(new YeuThichFragment());
             } else if (itemId == R.id.account) {
                 replaceFragment(new TaiKhoanFragment());
             }
