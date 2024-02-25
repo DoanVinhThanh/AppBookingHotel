@@ -36,6 +36,7 @@
 
         </ImageView>
         <TextView
+            android:id="@+id/DiaDiem_DuThuyen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Vịnh hạ long"
@@ -84,6 +85,7 @@
 
         </ImageView>
         <TextView
+            android:id="@+id/Mota_DuThuyen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Hạ thủy 2019 -"
@@ -113,7 +115,7 @@
         >
 
         <TextView
-            android:id="@+id/giatien"
+            android:id="@+id/giatien_Duthuyen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="3,500,000"
@@ -125,20 +127,6 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             >
-        </TextView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="đ/khách"
-            android:textColor="@color/black"
-            android:textSize="24dp"
-            android:textStyle="bold"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-
-            >
-
         </TextView>
 
         <androidx.appcompat.widget.AppCompatButton
