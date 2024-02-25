@@ -26,7 +26,7 @@ public class DangKy extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dang_ky);
-        Uinit();
+        Anhxa();
         passwordIcon1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -84,7 +84,7 @@ public class DangKy extends AppCompatActivity {
 
 
 
-    private void Uinit() {
+    private void Anhxa() {
 
         Edt_Hoten = findViewById(R.id.Edt_HoVaTen);
         Edt_Email = findViewById(R.id.Edt_Email);

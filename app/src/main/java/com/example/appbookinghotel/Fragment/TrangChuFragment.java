@@ -46,7 +46,7 @@ public class TrangChuFragment extends Fragment {
         final Handler handler = new Handler();
         final Runnable Update = new Runnable() {
             public void run() {
-                if (currentPage == 4) currentPage = 0;
+                if (currentPage == 8) currentPage = 0;
                 viewPager.setCurrentItem(currentPage++, true);
             }
         };

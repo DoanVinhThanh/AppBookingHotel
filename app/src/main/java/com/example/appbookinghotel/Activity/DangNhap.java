@@ -25,7 +25,7 @@ public class DangNhap extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dang_nhap);
-        Uinit();
+        Anhxa();
 
         passwordIcon.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,7 +64,7 @@ public class DangNhap extends AppCompatActivity {
 
     }
 
-    private void Uinit() {
+    private void Anhxa() {
          Edt_Email = findViewById(R.id.Edt_Email);
         Edt_MatKhau = findViewById(R.id.Edt_MatKhau);
         passwordIcon = findViewById(R.id.Show_icon);
