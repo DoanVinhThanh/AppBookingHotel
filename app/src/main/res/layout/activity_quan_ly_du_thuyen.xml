@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.QuanLyDuThuyen">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp">
+
+
+            <ImageView
+                android:id="@+id/imageChon"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/duthuyen1"/>
+            <EditText
+                android:id="@+id/edt_tenDuThuyen_admin"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Tên du thuyền"/>
+            <EditText
+                android:id="@+id/edt_diaDiemDuThuyen_admin"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Địa điểm"/>
+            <EditText
+                android:id="@+id/edt_moTaDuThuyen_admin"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Mô tả"/>
+            <EditText
+                android:id="@+id/edt_giaTienDuThuyen_admin"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Giá tiền"/>
+
+            <Button
+                android:id="@+id/btnTaiDuThuyen"
+                android:layout_marginTop="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tải Du thuyền"/>
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
