@@ -43,6 +43,7 @@
                         android:layout_marginTop="10dp"/>
 
                 <LinearLayout
+                    android:id="@+id/quanlyduthuyen"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -67,6 +68,7 @@
 
                 </LinearLayout>
                 <LinearLayout
+                    android:id="@+id/quanlydonhang"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -92,6 +94,7 @@
 
                 </LinearLayout>
                 <LinearLayout
+                    android:id="@+id/quanlythanhtoan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -117,6 +120,32 @@
 
                 </LinearLayout>
 
+                <LinearLayout
+                    android:id="@+id/quanlydanhgia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/border_admin"
+                    android:backgroundTint="@color/primary"
+                    android:padding="15dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Đánh giá"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        />
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/baseline_chevron_right_24"
+                        android:layout_marginLeft="200dp"/>
+
+                </LinearLayout>
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
     </LinearLayout>

@@ -14,6 +14,7 @@
         android:layout_height="200dp"
         android:src="@drawable/duthuyen1"
         android:background="@drawable/border_viewpager"
+        android:backgroundTint="@color/smoke"
         >
     </ImageView>
 
@@ -137,8 +138,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/DatNgay"
                 android:layout_width="100dp"
-                android:layout_height="45dp"
-
+                android:layout_height="48dp"
                 android:text="Đặt ngay"
                 android:textSize="18dp"
                 android:textAllCaps="false"

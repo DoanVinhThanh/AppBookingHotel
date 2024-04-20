@@ -49,7 +49,7 @@ public class DangNhap extends AppCompatActivity {
         Btn_DangNhap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(DangNhap.this, TrangChu.class);
+                Intent intent = new Intent(DangNhap.this, AdminTrangChu.class);
 
                 startActivity(intent);
             }
