@@ -27,5 +27,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:itemPaddingBottom="15dp"
+        android:background="@color/bar2"
+
         app:menu="@menu/menu_navbottom"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

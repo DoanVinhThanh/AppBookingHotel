@@ -35,21 +35,18 @@ public class QuanLyDuThuyen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quan_ly_du_thuyen);
         Anhxa();
-        setImageforDuThuyen();
-
-
     }
     private void Anhxa() {
         imagChonDuThuyen = findViewById(R.id.imageChon);
         edtTenDuThuyen = findViewById(R.id.edt_tenDuThuyen_admin);
         edtDiaDiemDuThuyen = findViewById(R.id.edt_diaDiemDuThuyen_admin);
+        edtMoTaDuThuyen = findViewById(R.id.edt_moTaDuThuyen_admin);
         edtGiaTienDuThuyen = findViewById(R.id.edt_giaTienDuThuyen_admin);
         btnTaiDuThuyen = findViewById(R.id.btnTaiDuThuyen);
         FirebaseStorage storage = FirebaseStorage.getInstance();
         storageReference = storage.getReference("images/");
         firestore = FirebaseFirestore.getInstance();
-    }
-    private void setImageforDuThuyen() {
+
         btnTaiDuThuyen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -66,8 +63,8 @@ public class QuanLyDuThuyen extends AppCompatActivity {
                 openFileChooser();
             }
         });
-    }
 
+    }
 
     private void openFileChooser() {
         Intent intent = new Intent();
@@ -103,11 +100,11 @@ public class QuanLyDuThuyen extends AppCompatActivity {
 
                             })
                             .addOnFailureListener(e -> {
-                                Toast.makeText(this, "Không lấy được URL tải xuống: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(this, "Không lấy được URL tải xuống: " , Toast.LENGTH_SHORT).show();
                             });
                 })
                 .addOnFailureListener(e -> {
-                    Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Tải ảnh thất bại", Toast.LENGTH_SHORT).show();
                 });
     }
 
@@ -118,12 +115,12 @@ public class QuanLyDuThuyen extends AppCompatActivity {
         String MoTaDuThuyen = edtMoTaDuThuyen.getText().toString();
         String GiaTienDuThuyen = edtGiaTienDuThuyen.getText().toString();
 
-        Map<String, String> duThuyen = new HashMap<>();
+        Map<String, Object> duThuyen = new HashMap<>();
         duThuyen.put("TenDuThuyen",TenDuThuyen);
         duThuyen.put("DiaDiemDuThuyen",DiaDiemDuThuyen);
         duThuyen.put("MoTaDuThuyen",MoTaDuThuyen);
-        duThuyen.put("GiaTienDuThuyen",GiaTienDuThuyen);
-        duThuyen.put("HinhAnh",ImageUri);
+        duThuyen.put("GiaDuThuyen",GiaTienDuThuyen);
+        duThuyen.put("HinhAnhDuThuyen",ImageUri);
 
         firestore.collection("DuThuyen")
                 .add(duThuyen)
@@ -131,7 +128,7 @@ public class QuanLyDuThuyen extends AppCompatActivity {
                     Toast.makeText(QuanLyDuThuyen.this, "Tải thành công", Toast.LENGTH_SHORT).show();
                 })
                 .addOnFailureListener(e -> {
-                    Toast.makeText(QuanLyDuThuyen.this, "Tải thất bại"+ e.getMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuanLyDuThuyen.this, "Tải thất bại", Toast.LENGTH_SHORT).show();
                 });
 
     }
