@@ -146,6 +146,16 @@
                         android:layout_marginLeft="200dp"/>
 
                 </LinearLayout>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_DangXuat_Admin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Đăng xuất"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:background="@drawable/bg"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="50dp"/>
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
     </LinearLayout>
