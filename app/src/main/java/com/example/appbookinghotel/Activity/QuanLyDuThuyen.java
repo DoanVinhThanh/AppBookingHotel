@@ -1,11 +1,14 @@
 package com.example.appbookinghotel.Activity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -39,6 +42,19 @@ public class QuanLyDuThuyen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quan_ly_du_thuyen);
         Anhxa();
+        // Lấy layout gốc của Activity
+        View rootView = getWindow().getDecorView().getRootView();
+
+        // Thiết lập một OnTouchListener cho layout gốc
+        rootView.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                // Ẩn bàn phím
+                InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
+                return false;
+            }
+        });
 
         btnTaiDuThuyen.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,10 +64,6 @@ public class QuanLyDuThuyen extends AppCompatActivity {
                 }else {
                     Toast.makeText(QuanLyDuThuyen.this,"Yêu cầu chọn hình ảnh",Toast.LENGTH_SHORT).show();
                 }
-                edtTenDuThuyen.setText("");
-                edtDiaDiemDuThuyen.setText("");
-                edtMoTaDuThuyen.setText("");
-                edtGiaTienDuThuyen.setText("");
 
             }
         });
@@ -142,6 +154,11 @@ public class QuanLyDuThuyen extends AppCompatActivity {
                                 }
                                 Toast.makeText(this, "Tải dữ liệu thành công", Toast.LENGTH_SHORT).show();
                                 saveDataToFirestore(uri.toString());
+
+                                edtTenDuThuyen.setText("");
+                                edtDiaDiemDuThuyen.setText("");
+                                edtMoTaDuThuyen.setText("");
+                                edtGiaTienDuThuyen.setText("");
 
                             })
                             .addOnFailureListener(e -> {

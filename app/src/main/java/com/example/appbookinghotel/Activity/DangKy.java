@@ -1,11 +1,14 @@
 package com.example.appbookinghotel.Activity;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.text.TextUtils;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -47,6 +50,19 @@ public class DangKy extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dang_ky);
         Anhxa();
+        // Lấy layout gốc của Activity
+        View rootView = getWindow().getDecorView().getRootView();
+
+        // Thiết lập một OnTouchListener cho layout gốc
+        rootView.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                // Ẩn bàn phím
+                InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
+                return false;
+            }
+        });
         passwordIcon1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
