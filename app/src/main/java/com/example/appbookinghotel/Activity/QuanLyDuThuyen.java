@@ -115,7 +115,31 @@ public class QuanLyDuThuyen extends AppCompatActivity {
                     // Lấy URL tải xuống của hình ảnh
                     fileReference.getDownloadUrl()
                             .addOnSuccessListener(uri -> {
+                                String TenDuThuyen1 = edtTenDuThuyen.getText().toString();
+                                String DiaDiemDuThuyen1 = edtDiaDiemDuThuyen.getText().toString();
+                                String MoTaDuThuyen1 = edtMoTaDuThuyen.getText().toString();
+                                String GiaTienDuThuyen1 = edtGiaTienDuThuyen.getText().toString();
 
+                                if(TextUtils.isEmpty(TenDuThuyen1)){
+                                    showError(edtTenDuThuyen,"Vui lòng nhập Tên du thuyền!!");
+                                    edtTenDuThuyen.requestFocus();
+                                    return;
+                                }
+                                if(TextUtils.isEmpty(DiaDiemDuThuyen1)){
+                                    showError(edtDiaDiemDuThuyen,"Vui lòng nhập địa điểm du thuyền");
+                                    edtDiaDiemDuThuyen.requestFocus();
+                                    return;
+                                }
+                                if(TextUtils.isEmpty(MoTaDuThuyen1)){
+                                    showError(edtMoTaDuThuyen,"Vui lòng nhập Mô tả du thuyền!!");
+                                    edtMoTaDuThuyen.requestFocus();
+                                    return;
+                                }
+                                if(TextUtils.isEmpty(GiaTienDuThuyen1)){
+                                    showError(edtGiaTienDuThuyen,"Vui lòng nhập Giá du thuyền");
+                                    edtGiaTienDuThuyen.requestFocus();
+                                    return;
+                                }
                                 Toast.makeText(this, "Tải dữ liệu thành công", Toast.LENGTH_SHORT).show();
                                 saveDataToFirestore(uri.toString());
 

@@ -12,7 +12,7 @@
         android:id="@+id/backgroundlayout"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:background="@drawable/bg"
+        android:background="@color/splash"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,7 +23,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:scaleY="0"
-        android:src="@drawable/hotel"
+        android:src="@drawable/icon1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,11 +34,11 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:scaleX="1"
-        android:src="@drawable/hotel"
+        android:src="@drawable/icon1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/white" />
+        />
 
 </androidx.constraintlayout.motion.widget.MotionLayout>
