@@ -7,77 +7,67 @@
     android:layout_height="match_parent"
     tools:context=".Activity.QuanLyDuThuyen">
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_homepage"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+            <ImageButton
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:background="@null"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                android:layout_marginRight="110dp"
+                android:src="@drawable/logo" />
 
-            android:orientation="vertical"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginTop="20dp">
-
+        </androidx.appcompat.widget.Toolbar>
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
             <LinearLayout
-                android:id="@+id/back_admin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <ImageButton
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/baseline_arrow_back_ios_24"
-                    android:background="@color/white"/>
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Back"
-                    android:textColor="@color/primary"
+                    android:text="Danh sách các du thuyền"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
                     android:textStyle="bold"
-                    android:textSize="20dp"
-                    android:layout_gravity="center"/>
-
+                    android:layout_marginTop="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="````````"
+                    android:textColor="@color/primary"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_Them_Admin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thêm"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:background="@drawable/bg" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcv_DuThuyen_admin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center">
+                </androidx.recyclerview.widget.RecyclerView>
             </LinearLayout>
-
-            <ImageView
-                android:id="@+id/imageChon"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:src="@drawable/duthuyen1"
-                android:layout_gravity="center"/>
-            <EditText
-                android:id="@+id/edt_tenDuThuyen_admin"
-                android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:hint="Tên du thuyền"/>
-            <EditText
-                android:id="@+id/edt_diaDiemDuThuyen_admin"
-                android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:hint="Địa điểm"/>
-            <EditText
-                android:id="@+id/edt_moTaDuThuyen_admin"
-                android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:hint="Mô tả"/>
-            <EditText
-                android:id="@+id/edt_giaTienDuThuyen_admin"
-                android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:hint="Giá tiền"/>
-
-            <Button
-                android:id="@+id/btnTaiDuThuyen"
-                android:layout_marginTop="50dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Tải Du thuyền"/>
-
-        </LinearLayout>
-    </ScrollView>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
 </FrameLayout>

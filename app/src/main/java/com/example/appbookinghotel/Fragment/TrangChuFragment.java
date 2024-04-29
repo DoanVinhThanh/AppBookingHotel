@@ -28,11 +28,7 @@ public class TrangChuFragment extends Fragment {
     private RecyclerView rcv_duthuyen;
     private DuThuyenAdapter duThuyenAdapter;
     private ArrayList<DuThuyen> duThuyens;
-
     private Firebase firebase;
-
-
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -42,6 +38,7 @@ public class TrangChuFragment extends Fragment {
         Anhxa(view);
         setAutoScrollViewScroll();
         setDataForRcv();
+
         return view;
     }
 

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.SuaDuThuyenActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:id="@+id/imageChon_Sua"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/duthuyen1"
+                android:layout_gravity="center"/>
+            <EditText
+                android:id="@+id/edt_tenDuThuyen_admin_Sua"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Tên du thuyền"/>
+            <EditText
+                android:id="@+id/edt_diaDiemDuThuyen_admin_Sua"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Địa điểm"/>
+            <EditText
+                android:id="@+id/edt_moTaDuThuyen_admin_Sua"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Mô tả"/>
+            <EditText
+                android:id="@+id/edt_giaTienDuThuyen_admin_Sua"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Giá tiền"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/Edit_admin_Sua"
+                    android:layout_width="100dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:text="Sửa"
+                    android:textSize="18dp"
+                    android:textAllCaps="false"
+
+                    android:background="@drawable/round_back_primary"
+                    android:textColor="#FFFFFF"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/Delete_admin_Sua"
+                    android:layout_width="100dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:text="Xóa"
+                    android:textSize="18dp"
+                    android:textAllCaps="false"
+
+                    android:background="@drawable/round_back_primary"
+                    android:backgroundTint="@color/red"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="#FFFFFF"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

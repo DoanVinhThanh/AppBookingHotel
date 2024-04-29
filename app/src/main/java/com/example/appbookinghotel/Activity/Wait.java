@@ -16,8 +16,6 @@ public class Wait extends AppCompatActivity {
         setContentView(R.layout.activity_wait);
         progressDialog_wait = new ProgressDialog(this);
         progressDialog_wait.show();
-
-
         progressDialog_wait.dismiss();
         finish();
 

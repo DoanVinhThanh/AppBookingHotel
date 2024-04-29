@@ -6,12 +6,11 @@
     android:padding="10dp"
     android:layout_marginTop="10dp"
     android:layout_marginEnd="10dp"
-    android:layout_gravity="center"
     android:background="@drawable/border_viewpager"
-    >
+    android:layout_gravity="center">
 
     <ImageView
-        android:id="@+id/img_booking"
+        android:id="@+id/img_booking_admin"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:src="@drawable/duthuyen1"
@@ -24,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_below="@+id/img_booking">
+        android:layout_below="@+id/img_booking_admin">
         <LinearLayout
             android:id="@+id/location"
             android:layout_width="wrap_content"
@@ -43,7 +42,7 @@
 
             </ImageView>
             <TextView
-                android:id="@+id/DiaDiem_DuThuyen"
+                android:id="@+id/DiaDiem_DuThuyen_admin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Vịnh hạ long"
@@ -60,7 +59,7 @@
 
         </LinearLayout>
         <TextView
-            android:id="@+id/name_booking"
+            android:id="@+id/name_booking_admin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Heriage"
@@ -92,7 +91,7 @@
 
             </ImageView>
             <TextView
-                android:id="@+id/Mota_DuThuyen"
+                android:id="@+id/Mota_DuThuyen_admin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Hạ thủy 2019 -"
@@ -118,11 +117,10 @@
             android:layout_marginTop="35dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="25dp"
-
             >
 
             <TextView
-                android:id="@+id/giatien_Duthuyen"
+                android:id="@+id/giatien_Duthuyen_admin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="3,500,000"
@@ -137,17 +135,27 @@
                 >
             </TextView>
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/DatNgay"
-                android:layout_width="100dp"
-                android:layout_height="48dp"
-                android:layout_gravity="center"
-                android:text="Đặt ngay"
-                android:textSize="18dp"
-                android:textAllCaps="false"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/round_back_primary"
-                android:textColor="#FFFFFF"/>
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/Edit_admin"
+                    android:layout_width="100dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:text="Sửa"
+                    android:textSize="18dp"
+                    android:textAllCaps="false"
+
+                    android:background="@drawable/round_back_primary"
+                    android:textColor="#FFFFFF"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

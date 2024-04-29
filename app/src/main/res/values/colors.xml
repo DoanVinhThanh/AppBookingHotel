@@ -7,5 +7,6 @@
     <color name="bar">#6EC2F7</color>
     <color name="bar2">#9FD7F9</color>
     <color name="splash">#5DCCFD</color>
-    5DCCFD
+    <color name="red">#FF0000</color>
+
 </resources>

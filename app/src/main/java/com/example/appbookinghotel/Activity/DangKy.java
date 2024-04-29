@@ -202,6 +202,7 @@ public class DangKy extends AppCompatActivity {
                         if(task.isSuccessful()){
                             if (task.getResult() != null && !task.getResult().isEmpty()){
                                 Toast.makeText(DangKy.this, "Email đã tồn tại!", Toast.LENGTH_SHORT).show();
+                                progressDialog_DK.dismiss();
                             }
                             else {
                                 fAuth_DK.createUserWithEmailAndPassword(email,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
