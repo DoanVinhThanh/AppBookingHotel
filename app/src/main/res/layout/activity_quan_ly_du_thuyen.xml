@@ -16,14 +16,37 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical">
+            <LinearLayout
+                android:id="@+id/back_admin_QuanLyDuThuyen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="start"
+                >
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/baseline_arrow_back_ios_24"
+                    android:background="@color/white"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Back"
+                    android:textColor="@color/primary"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
             <ImageButton
                 android:layout_width="150dp"
                 android:layout_height="50dp"
                 android:background="@null"
                 android:contentDescription="@string/app_name"
                 android:scaleType="fitXY"
-                android:layout_marginRight="110dp"
-                android:src="@drawable/logo" />
+                android:layout_marginRight="30dp"
+                android:src="@drawable/logo"
+                android:layout_gravity="end"/>
 
         </androidx.appcompat.widget.Toolbar>
         <androidx.core.widget.NestedScrollView

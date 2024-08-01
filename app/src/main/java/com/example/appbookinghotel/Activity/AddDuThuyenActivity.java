@@ -77,6 +77,7 @@ public class AddDuThuyenActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(AddDuThuyenActivity.this, QuanLyDuThuyen.class));
+                finish();
             }
         });
     }

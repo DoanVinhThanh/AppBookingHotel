@@ -3,6 +3,7 @@ package com.example.appbookinghotel.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
@@ -27,6 +28,8 @@ public class QuanLyDuThuyen extends AppCompatActivity {
 
     private FirebaseFirestore firestore;
 
+    LinearLayout btn_back_admin_qldt;
+
     AppCompatButton btn_Them_booking,btn_Sua_booking,btn_Xoa_booking;
 
     @Override
@@ -42,21 +45,22 @@ public class QuanLyDuThuyen extends AppCompatActivity {
                 finish();
             }
         });
-        btn_Sua_booking.setOnClickListener(new View.OnClickListener() {
+
+        btn_back_admin_qldt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(QuanLyDuThuyen.this, SuaDuThuyenActivity.class);
-                startActivity(intent);
-
+                startActivity(new Intent(QuanLyDuThuyen.this, AdminTrangChu.class));
+                finish();
             }
         });
+
 
     }
     private void setDataForRcv() {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(QuanLyDuThuyen.this,LinearLayoutManager.VERTICAL,false);
         rcv_duthuyen_admin.setLayoutManager(linearLayoutManager);
 
-        firebase.getAllDuThuyen(new Firebase.FirebaseCallback<DuThuyen>() {
+        firebase.getAllDuThuyenAdmin(new Firebase.FirebaseCallback<DuThuyen>() {
             @Override
             public void onCallback(ArrayList<DuThuyen> list) {
 
@@ -74,5 +78,6 @@ public class QuanLyDuThuyen extends AppCompatActivity {
         btn_Sua_booking = findViewById(R.id.Edit_admin);
         FirebaseApp.initializeApp(QuanLyDuThuyen.this);
         firestore = FirebaseFirestore.getInstance();
+        btn_back_admin_qldt = findViewById(R.id.back_admin_QuanLyDuThuyen);
     }
 }

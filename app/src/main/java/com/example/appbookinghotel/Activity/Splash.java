@@ -26,11 +26,9 @@ public class Splash extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(Splash.this,DangNhap.class));
-                finish();
-                //NextActivity();
+                NextActivity();
             }
-        },3800);
+        },2500);
     }
 
     private void NextActivity() {
@@ -60,6 +58,7 @@ public class Splash extends AppCompatActivity {
                                         Toast.makeText(Splash.this, "Không có quyền truy cập", Toast.LENGTH_SHORT).show();
                                     }
                                 }
+                                finish();
                             }
                         }
                     });

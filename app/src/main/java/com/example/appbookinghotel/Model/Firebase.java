@@ -56,4 +56,27 @@ public class Firebase {
                 });
 
     }
+    public void getAllDuThuyenAdmin(FirebaseCallback<DuThuyen> callback) {
+        ArrayList<DuThuyen> duThuyenArrayList = new ArrayList<>();
+        mfirestore.collection("DuThuyen")
+                .get()
+                .addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        for (QueryDocumentSnapshot document : task.getResult()) {
+                            DuThuyen duThuyen = new DuThuyen(
+                                    document.getId(),
+                                    document.getString("TenDuThuyen"),
+                                    document.getString("DiaDiemDuThuyen"),
+                                    document.getString("MoTaDuThuyen"),
+                                    document.getString("GiaDuThuyen"),
+                                    document.getString("HinhAnhDuThuyen"));
+                            duThuyenArrayList.add(duThuyen);
+                        }
+                        callback.onCallback(duThuyenArrayList);
+                    } else {
+                        Log.w(TAG, "Error getting documents.", task.getException());
+                    }
+                });
+
+    }
 }
