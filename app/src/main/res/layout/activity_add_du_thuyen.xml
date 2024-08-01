@@ -28,14 +28,15 @@
                     android:layout_height="50dp"
                     android:src="@drawable/baseline_arrow_back_ios_24"
                     android:background="@color/white"/>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:text="Back"
                     android:textColor="@color/primary"
-                    android:textStyle="bold"
                     android:textSize="20dp"
-                    android:layout_gravity="center"/>
+                    android:textStyle="bold" />
 
             </LinearLayout>
 

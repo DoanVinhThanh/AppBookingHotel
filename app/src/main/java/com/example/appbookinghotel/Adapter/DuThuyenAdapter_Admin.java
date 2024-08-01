@@ -1,6 +1,8 @@
 package com.example.appbookinghotel.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +14,7 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.appbookinghotel.Activity.SuaDuThuyenActivity;
 import com.example.appbookinghotel.Model.DuThuyen;
 import com.example.appbookinghotel.Model.Firebase;
 import com.example.appbookinghotel.R;
@@ -46,6 +49,17 @@ public class DuThuyenAdapter_Admin extends RecyclerView.Adapter<DuThuyenAdapter_
         holder.tvMotaDuThuyen.setText(duThuyen.getMoTaDuThuyen());
         holder.tvGiaDuThuyen.setText(duThuyen.getGiaDuThuyen() + "đ / khách");
         Glide.with(context).load(duThuyen.getHinhAnhDuThuyen()).into(holder.img_DuThuyen);
+
+        holder.btn_Update_admin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, SuaDuThuyenActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("object_user",duThuyen);
+                intent.putExtras(bundle);
+                context.startActivity(intent);
+            }
+        });
     }
 
 
@@ -70,5 +84,7 @@ public class DuThuyenAdapter_Admin extends RecyclerView.Adapter<DuThuyenAdapter_
             img_DuThuyen = itemView.findViewById(R.id.img_booking_admin);
             btn_Update_admin = itemView.findViewById(R.id.Edit_admin);
         }
+
+
     }
 }
