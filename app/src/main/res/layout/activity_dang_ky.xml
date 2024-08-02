@@ -34,7 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:background="@drawable/round_back_dark"
-        android:hint="Họ và tên"
+        android:hint="Ditme thanh"
         android:maxLines="1"
         android:inputType="textPersonName"
         android:textSize="16sp"
