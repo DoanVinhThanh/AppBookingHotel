@@ -46,7 +46,12 @@ public class Firebase {
                                     document.getString("DiaDiemDuThuyen"),
                                     document.getString("MoTaDuThuyen"),
                                     document.getString("GiaDuThuyen"),
-                                    document.getString("HinhAnhDuThuyen"));
+                                    document.getString("HinhAnhDuThuyen"),
+                                    document.getString("HinhAnhDuThuyen1"),
+                                    document.getString("HinhAnhDuThuyen2"),
+                                    document.getString("HinhAnhDuThuyen3"),
+                                    document.getString("HinhAnhDuThuyen4"),
+                                    document.getString("HinhAnhDuThuyen5"));
                             duThuyenArrayList.add(duThuyen);
                         }
                         callback.onCallback(duThuyenArrayList);
@@ -69,7 +74,13 @@ public class Firebase {
                                     document.getString("DiaDiemDuThuyen"),
                                     document.getString("MoTaDuThuyen"),
                                     document.getString("GiaDuThuyen"),
-                                    document.getString("HinhAnhDuThuyen"));
+                                    document.getString("HinhAnhDuThuyen"),
+                                    document.getString("HinhAnhDuThuyen1"),
+                                    document.getString("HinhAnhDuThuyen2"),
+                                    document.getString("HinhAnhDuThuyen3"),
+                                    document.getString("HinhAnhDuThuyen4"),
+                                    document.getString("HinhAnhDuThuyen5")
+                            );
                             duThuyenArrayList.add(duThuyen);
                         }
                         callback.onCallback(duThuyenArrayList);
@@ -77,6 +88,5 @@ public class Firebase {
                         Log.w(TAG, "Error getting documents.", task.getException());
                     }
                 });
-
     }
 }

@@ -19,7 +19,9 @@ import com.example.appbookinghotel.Model.DuThuyen;
 import com.example.appbookinghotel.Model.Firebase;
 import com.example.appbookinghotel.R;
 
+import java.text.NumberFormat;
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class DuThuyenAdapter extends RecyclerView.Adapter<DuThuyenAdapter.DuThuyenVH> {
     private Context context;
@@ -47,7 +49,18 @@ public class DuThuyenAdapter extends RecyclerView.Adapter<DuThuyenAdapter.DuThuy
         holder.tvTenDuThuyen.setText(duThuyen.getTenDuThuyen());
         holder.tvDiaDiemDuThuyen.setText(duThuyen.getDiaDiemDuThuyen());
         holder.tvMotaDuThuyen.setText(duThuyen.getMoTaDuThuyen());
-        holder.tvGiaDuThuyen.setText(duThuyen.getGiaDuThuyen() + "đ / khách");
+
+
+        // Chuyển đổi từ String sang int hoặc double (tuỳ theo dữ liệu)
+        double giaDuThuyen = Double.parseDouble(duThuyen.getGiaDuThuyen());
+
+        // Format giá
+        String formattedPrice = NumberFormat.getNumberInstance(Locale.US).format(giaDuThuyen);
+
+        // Gán giá trị đã format vào TextView
+        holder.tvGiaDuThuyen.setText(formattedPrice + " đ / khách");
+
+
         Glide.with(context).load(duThuyen.getHinhAnhDuThuyen()).into(holder.img_DuThuyen);
         holder.btn_DatNgay.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,7 +73,7 @@ public class DuThuyenAdapter extends RecyclerView.Adapter<DuThuyenAdapter.DuThuy
     private void onClickGoToDetail(DuThuyen duThuyen) {
         Intent intent = new Intent(context, DetailActivity.class);
         Bundle bundle = new Bundle();
-        bundle.putSerializable("object_user",duThuyen);
+        bundle.putSerializable("object_booking",duThuyen);
         intent.putExtras(bundle);
         context.startActivity(intent);
     }

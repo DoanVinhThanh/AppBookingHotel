@@ -17,6 +17,8 @@
         android:src="@drawable/duthuyen1"
         android:background="@drawable/border_viewpager"
         android:backgroundTint="@color/smoke"
+        android:scaleType="centerCrop"
+
         >
     </ImageView>
 

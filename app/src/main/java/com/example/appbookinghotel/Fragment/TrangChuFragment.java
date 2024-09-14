@@ -69,7 +69,7 @@ public class TrangChuFragment extends Fragment {
         viewPager.setClipToOutline(true);
         Timer timer;
         final long DELAY_MS = 500;
-        final long PERIOD_MS = 3000;
+        final long PERIOD_MS = 5000;
         final Handler handler = new Handler();
         final Runnable Update = new Runnable() {
             public void run() {

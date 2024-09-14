@@ -38,8 +38,7 @@ public class DangNhap extends AppCompatActivity {
 
     private ProgressDialog progressDialog_DN;
 
-    FirebaseAuth fAuth_DN;
-    FirebaseFirestore fStore_DN;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -135,11 +134,11 @@ public class DangNhap extends AppCompatActivity {
                                                         if (document.getString("isUser") != null) {
                                                             // Chuyển hướng đến trang User
                                                             startActivity(new Intent(DangNhap.this, TrangChu.class));
-                                                            finish();
+                                                            finishAffinity();
                                                         } else if (document.getString("isAdmin") != null) {
                                                             // Chuyển hướng đến trang Admin
                                                             startActivity(new Intent(DangNhap.this, AdminTrangChu.class));
-                                                            finish();
+                                                            finishAffinity();
                                                         } else {
                                                             // Trường hợp khác, có thể xử lý tại đây
                                                             Toast.makeText(DangNhap.this, "Không có quyền truy cập", Toast.LENGTH_SHORT).show();
@@ -170,7 +169,11 @@ public class DangNhap extends AppCompatActivity {
         passwordIcon = findViewById(R.id.Show_icon);
         btn_DangKy_DN = findViewById(R.id.DangKyBtn_DN);
         btn_DangNhap_DN = findViewById(R.id.DangNhapBtn_DN);
+
+
         progressDialog_DN = new ProgressDialog(this);
+        progressDialog_DN.setMessage("Đang tải...");
+        progressDialog_DN.setCancelable(false);
     }
 
 }
